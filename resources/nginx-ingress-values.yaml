@@ -1,0 +1,7 @@
+controller:
+  hostNetwork: true #Because we have no LoadBalancer, we have to expose ingress controller pod directly to host network
+  reportNodeInternalIp: true
+  extraArgs:
+    http-port: "8080" # Specifying non-standard port for HTTP endpoint
+  service:
+    enabled: false # We don't need ingress-controller service in such configuration
